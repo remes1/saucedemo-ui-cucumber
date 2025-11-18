@@ -26,7 +26,7 @@ To run tests against the QA environment, create a file:
 
 ```.env.qa```
 
-Example contents:
+Сontent:
 
 ```
 BASE_URL=https://saucedemo.com/
