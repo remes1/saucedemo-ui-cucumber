@@ -29,10 +29,12 @@ To run tests against the QA environment, create a file:
 
 Example contents:
 
+```
 BASE_URL=https://saucedemo.com/
 USERNAME=standard_user
 BLOCKED_USERNAME=locked_out_user
 PASSWORD=secret_sauce
+```
 
 ## 🖥️ Running Tests Locally
 
