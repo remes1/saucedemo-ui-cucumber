@@ -42,3 +42,9 @@ PASSWORD=secret_sauce
 ## 🐳 Running Tests in Docker (Selenium Grid)
 
 ```ENV=qa mvn test -Dcucumber.options="--tags @regression" -Ddriver.env=DOCKER```
+
+## 📄 Test Reports
+
+After running the tests, an HTML report is generated at:
+
+```target/cucumber-report.html```
