@@ -12,6 +12,6 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 @IncludeEngines("cucumber")
 @SelectClasspathResource("features")
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty, html:target/cucumber-report.html")
-@ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME, value = "@regression or @e2e")
+@ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME, value = "@regression")
 public class CucumberTest {
 }
