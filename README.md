@@ -22,10 +22,9 @@ Automated UI testing framework for **SauceDemo** using:
 
 ## ▶️ Running Tests
 
-1. Create Environment File
 To run tests against the QA environment, create a file:
 
-.env.qa
+```.env.qa```
 
 Example contents:
 
@@ -38,8 +37,8 @@ PASSWORD=secret_sauce
 
 ## 🖥️ Running Tests Locally
 
-ENV=qa mvn test -Dcucumber.options="--tags @regression" -Ddriver.env=LOCAL
+```ENV=qa mvn test -Dcucumber.options="--tags @regression" -Ddriver.env=LOCAL```
 
 ## 🐳 Running Tests in Docker (Selenium Grid)
 
-ENV=qa mvn test -Dcucumber.options="--tags @regression" -Ddriver.env=DOCKER
+```ENV=qa mvn test -Dcucumber.options="--tags @regression" -Ddriver.env=DOCKER```
