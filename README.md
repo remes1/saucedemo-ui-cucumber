@@ -55,5 +55,8 @@ After running the tests, an HTML report is generated at:
 ```target/cucumber-report.html```
 
 ![Report_folder](images/REPORT.png)
+### Success tests ✅
 ![Report_success](images/REPORT_SUCCESS.png)
+
+### Failed tests ❌ 
 ![Report_failed](images/REPORT_FAILED.png)
