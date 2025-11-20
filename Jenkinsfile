@@ -13,14 +13,7 @@ pipeline {
             }
         }
 
-        stage('Start Selenium Grid') {
-            steps {
-                sh 'docker compose -f docker-compose.selenium.yml up -d'
-                sh 'sleep 5'
-            }
-        }
-
-        stage('Run Tests (Docker Grid)') {
+        stage('Run Tests (Docker Remote Grid)') {
             steps {
                 withCredentials([
                     string(credentialsId: 'USERNAME', variable: 'USERNAME'),
@@ -29,8 +22,8 @@ pipeline {
                     string(credentialsId: 'BASE_URL', variable: 'BASE_URL')
                 ]) {
                     sh '''
-                        echo "Running regression tests on Docker Grid..."
-                        mvn clean test -Ddriver.env=DOCKER -Dcucumber.options="--tags @regression"
+                        echo "Running regression tests on Docker Remote Grid..."
+                        mvn clean test -Ddriver.env=DOCKER_REMOTE -Dcucumber.options="--tags @regression" -Dremote.hub.url=http://localhost:4444/wd/hub
                     '''
                 }
             }
@@ -52,9 +45,6 @@ pipeline {
     }
 
     post {
-        always {
-            sh 'docker compose -f docker-compose.selenium.yml down'
-        }
         success {
             echo "Tests finished successfully!"
         }
