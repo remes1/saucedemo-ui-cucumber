@@ -38,6 +38,7 @@ PASSWORD=secret_sauce
 ## 🖥️ Running Tests Locally
 
 ```ENV=qa mvn test -Dcucumber.options="--tags @regression" -Ddriver.env=LOCAL```
+![Running_tests_locally 1](images/LOCAL.png)
 
 ## 🐳 Running Tests in Docker (Selenium Grid)
 
