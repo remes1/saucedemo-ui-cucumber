@@ -38,14 +38,22 @@ PASSWORD=secret_sauce
 ## 🖥️ Running Tests Locally
 
 ```ENV=qa mvn test -Dcucumber.options="--tags @regression" -Ddriver.env=LOCAL```
+
 ![Running_tests_locally 1](images/LOCAL.png)
 
 ## 🐳 Running Tests in Docker (Selenium Grid)
 
 ```ENV=qa mvn test -Dcucumber.options="--tags @regression" -Ddriver.env=DOCKER```
 
+![Running_tests_docker 1](images/DOCKER_1.png)
+![Running_tests_docker 1](images/DOCKER_2.png)
+
 ## 📄 Test Reports
 
 After running the tests, an HTML report is generated at:
 
 ```target/cucumber-report.html```
+
+![Report_folder](images/REPORT.png)
+![Report_success](images/REPORT_SUCCESS.png)
+![Report_failed](images/REPORT_FAILED.png)
