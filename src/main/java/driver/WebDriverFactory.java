@@ -12,10 +12,14 @@ import java.util.Map;
 
 public class WebDriverFactory {
 
-    public enum EnvType {LOCAL, DOCKER}
+    public enum EnvType {LOCAL, DOCKER, DOCKER_REMOTE}
 
     public static WebDriver createDriver(EnvType envType) {
-        return envType == EnvType.LOCAL ? createLocal() : createDocker();
+        return switch (envType) {
+            case LOCAL -> createLocal();
+            case DOCKER -> createDocker("http://localhost:4444/wd/hub");
+            case DOCKER_REMOTE -> createDocker(System.getProperty("remote.hub.url"));
+        };
     }
 
     private static WebDriver createLocal() {
@@ -30,15 +34,16 @@ public class WebDriverFactory {
         return new ChromeDriver(options);
     }
 
-    private static WebDriver createDocker() {
+    private static WebDriver createDocker(String hubUrl) {
         try {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--start-maximized");
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
 
-            URI remoteUri = URI.create("http://localhost:4444/wd/hub");
-            return new RemoteWebDriver(remoteUri.toURL(), options);
+            URI uri = URI.create(hubUrl);
+            return new RemoteWebDriver(uri.toURL(), options);
+
         } catch (Exception e) {
             throw new RuntimeException("Failed to create Docker WebDriver", e);
         }
