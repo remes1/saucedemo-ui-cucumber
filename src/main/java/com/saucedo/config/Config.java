@@ -1,4 +1,4 @@
-package config;
+package com.saucedo.config;
 
 import io.github.cdimascio.dotenv.Dotenv;
 

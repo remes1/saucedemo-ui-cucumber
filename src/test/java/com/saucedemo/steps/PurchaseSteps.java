@@ -1,10 +1,9 @@
 package com.saucedemo.steps;
 
 import com.saucedemo.context.PageObjectContext;
-import driver.DriverManager;
+import com.saucedo.driver.DriverManager;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pages.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;

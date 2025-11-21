@@ -1,7 +1,7 @@
 package com.saucedemo.context;
 
+import com.saucedo.pages.*;
 import org.openqa.selenium.WebDriver;
-import pages.*;
 
 public class PageObjectContext {
 

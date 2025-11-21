@@ -1,11 +1,11 @@
-package pages;
+package com.saucedo.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pages.components.MenuComponent;
-import pages.components.ProductItemComponent;
-import pages.components.ShoppingCartComponent;
+import com.saucedo.pages.components.MenuComponent;
+import com.saucedo.pages.components.ProductItemComponent;
+import com.saucedo.pages.components.ShoppingCartComponent;
 
 import java.util.List;
 

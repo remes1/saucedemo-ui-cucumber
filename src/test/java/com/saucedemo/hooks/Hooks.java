@@ -1,8 +1,8 @@
 package com.saucedemo.hooks;
 
 import com.saucedemo.context.PageObjectContext;
-import driver.DriverManager;
-import driver.WebDriverFactory;
+import com.saucedo.driver.DriverManager;
+import com.saucedo.driver.WebDriverFactory;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;

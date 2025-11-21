@@ -1,9 +1,9 @@
-package pages.components;
+package com.saucedo.pages.components;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pages.AbstractPage;
+import com.saucedo.pages.AbstractPage;
 
 public class MenuComponent extends AbstractPage {
 

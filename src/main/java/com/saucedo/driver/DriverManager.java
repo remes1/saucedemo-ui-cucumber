@@ -1,4 +1,4 @@
-package driver;
+package com.saucedo.driver;
 
 import org.openqa.selenium.WebDriver;
 

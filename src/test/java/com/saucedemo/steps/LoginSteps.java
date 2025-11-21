@@ -1,7 +1,7 @@
 package com.saucedemo.steps;
 
 import com.saucedemo.context.PageObjectContext;
-import config.Config;
+import com.saucedo.config.Config;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
