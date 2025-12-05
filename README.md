@@ -20,6 +20,20 @@ Automated UI testing framework for **SauceDemo** using:
 | Driver Management       | WebDriverManager   |
 | Language                | **Java 21**        |
 
+
+## 🚀 Installation
+
+```
+# Clone the repository
+git clone https://github.com/remes1/saucedemo-ui-cucumber.git
+
+# Navigate to the project folder
+cd saucedemo-ui-cucumber
+
+# Install dependencies
+mvn clean install
+```
+
 ## ▶️ Running Tests
 
 To run tests against the QA environment, create a file:
